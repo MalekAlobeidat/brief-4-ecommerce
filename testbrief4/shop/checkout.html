@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/shop/checkout.css">
+    <title> Checkout </title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/home/index.html" class="logo"><i class="fas fa-shopping-basket"></i> NATURE</a>
+
+        <nav class="navbar">
+            <a href="/home/index.html">Home</a>
+            <a href="/shop/shop.html">Shop</a>
+            <a href="#footer-footer">Contact Us</a>
+            <button class="btn" id="sigupp">sigup</button>
+            <button class="btn" id="loginn">login</button>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        </div>
+    </header>
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Fresh And <span>Organic</span> Products </h3>
+            <p>Embark On A Flavorful Journey With Our Exquisite Selection Of Fresh Fruits, Vibrant Vegetables, And
+                Aromatic Herbs!</p>
+        </div>
+    </section>
+
+
+    <div class="container">
+
+        <section class="card-container">
+
+            <div class="payment">
+                <form action="">
+                    <h1>Payment Information</h1>
+
+                    <h2>Cardholder Name</h2>
+                    <input type="text" class="inputbox" name="name" required />
+                    <h2>Card Number</h2>
+                    <input type="number" class="cc-number" id="number" maxlength="19" required />
+
+                    <h2>Card Type</h2>
+                    <select class="inputbox" name="card_type" id="card_type" required>
+                        <option value="">--Select a Card Type--</option>
+                        <option value="Visa">Visa</option>
+                        <option value="RuPay">RuPay</option>
+                        <option value="MasterCard">MasterCard</option>
+                    </select>
+                    <div class="expcvv">
+                        <h2 class="expcvv_text">Expiry</h2>
+                        <input type="date" class="inputbox" name="exp_date" id="exp_date" required />
+
+                        <h2 class="expcvv_text2">CVV</h2>
+                        <input type="password" class="inputbox" name="cvv" id="cvv" required />
+                    </div>
+
+                    <div class="bottom"><button type="submit" class="button" id="check"> Submit </button></div>
+                </form>
+            </div>
+
+
+        </section>
+
+    </div>
+      <!-- footer section starts -->
+
+      <section class="footer" id="footer-footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3> NATURE <i class="fas fa-shopping-basket"></i></h3>
+                <p>Visit our social media accounts for more!</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#" class="link"> <i class="fas fa-phone"></i> +123-446-4780 </a>
+                <a href="#" class="link"> <i class="fas fa-phone"></i> +453-576-4120 </a>
+                <a href="#" class="link"> <i class="fas fa-envelope"></i> GroceryStore@gmail.com </a>
+                <a href="#" class="link"> <i class="fas fa-map-marker-alt"></i> amman, jordan - 465690 </a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="/home/index.html" class="link"><i class="fas fa-arrow-right"></i>home</a>
+                <a href="/shop/shop.html" class="link"><i class="fas fa-arrow-right"></i>Shop</a>
+                <a href="/login_sigup/signup.html" class="link"><i class="fas fa-arrow-right"></i>Sign Up</a>
+            </div>
+    <div class="box">
+        <h3>Your Comments</h3>
+        <input type="text" placeholder="Add comment" class="comment-input">
+        
+        <div class="rating">
+            <input class="one" type="radio" id="star1" name="star1" value="1" ><label for="star1" onclick="saveValue(this)">&#9733;</label>
+            <input class="one" type="radio" id="star2" name="rating" value="2"><label for="star2" onclick="saveValue(this)">&#9733;</label>
+            <input class="one" type="radio" id="star2" name="rating" value="2"><label for="star3" onclick="saveValue(this)">&#9733;</label>
+            <input class="one" type="radio" id="star2" name="rating" value="2"><label for="star4" onclick="saveValue(this)">&#9733;</label>
+            <input class="one" type="radio" id="star2" name="rating" value="2"><label for="star5" onclick="saveValue(this)">&#9733;</label>
+
+        </div>
+        
+        <input type="submit" value="Submit" class="btn" onclick="submitComment()">
+    </div>
+
+        
+
+        <div class="credit"> created by <span> our team </span> | all rights reserved </div>
+
+    </section>
+
+    <!-- footer section end -->
+    <script>
+        let shoppingCart = document.querySelector('.shopping-cart');
+        document.querySelector('#cart-btn').onclick = () => {
+            window.location.href = 'cart.html';
+        };
+
+    </script>
+    <script src="/shop/chechout.js"></script>
+
+
+
+</body>
+
+</html>

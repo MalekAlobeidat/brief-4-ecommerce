@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Order</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+    <link rel="stylesheet" href="assets/css/demo.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+    <style>
+        .aa {
+            width: 70%;
+            float: left;
+            margin-left: 300px;
+            margin-top: 100px;
+        }
+
+        .add {
+            display: inline-block;
+            outline: 0;
+            cursor: pointer;
+            margin: 12px;
+            padding: 5px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            vertical-align: middle;
+            border: 1px solid;
+            border-radius: 6px;
+            color: #ffffff;
+            background-color: #2ea44f;
+            border-color: #1b1f2326;
+            box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
+            transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+            transition-property: color, background-color, border-color;
+
+            :hover {
+                background-color: #2c974b;
+                border-color: #1b1f2326;
+                transition-duration: 0.1s;
+            }
+        }
+
+        .view {
+            display: inline-block;
+            outline: 0;
+            cursor: pointer;
+            padding: 5px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            vertical-align: middle;
+            border: 1px solid;
+            border-radius: 6px;
+            color: #ffffff;
+            background-color: rgb(38, 120, 187);
+            border-color: #1b1f2326;
+            box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
+            transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+            transition-property: color, background-color, border-color;
+
+            :hover {
+                background-color: rgb(38, 120, 187);
+                border-color: #1b1f2326;
+                transition-duration: 0.1s;
+            }
+        }
+
+        .update {
+            display: inline-block;
+            outline: 0;
+            cursor: pointer;
+            padding: 5px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            vertical-align: middle;
+            border: 1px solid;
+            border-radius: 6px;
+            color: #ffffff;
+            background-color: #ee3301;
+            border-color: #1b1f2326;
+            box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
+            transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+            transition-property: color, background-color, border-color;
+
+            :hover {
+                background-color: #ee3301;
+                border-color: #1b1f2326;
+                transition-duration: 0.1s;
+            }
+        }
+
+        .delete {
+            display: inline-block;
+            outline: 0;
+            cursor: pointer;
+            padding: 5px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            vertical-align: middle;
+            border: 1px solid;
+            border-radius: 6px;
+            color: #ffffff;
+            background-color: rgb(231, 46, 46);
+            border-color: #1b1f2326;
+            box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
+            transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+            transition-property: color, background-color, border-color;
+
+            :hover {
+                background-color: #f33939;
+                border-color: #1b1f2326;
+                transition-duration: 0.1s;
+            }
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bolder;
+            color: #130f40;
+
+        }
+
+        .logo i {
+            color: #ee3301;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- WRAPPER -->
+    <div id="wrapper">
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="brand">
+                <a href="#" class="logo"><i class="fas fa-shopping-basket"></i> NATURE</a>
+            </div>
+            <div class="container-fluid">
+                <div class="navbar-btn">
+                    <button type="button" class="btn-toggle-fullwidth"><i
+                            class="lnr lnr-arrow-left-circle"></i></button>
+                </div>
+
+                <div class="navbar-btn navbar-btn-right">
+                    <button class="btn update-pro"
+                    style="color:#130f40 ; background-color: #ee3301;width: 100px; height:40px ;"
+                    id="logoutt">
+                    Logout</button>
+                </div>
+
+        </nav>
+        <!-- END NAVBAR -->
+        <!-- LEFT SIDEBAR -->
+        <div id="sidebar-nav" class="sidebar">
+            <div class="sidebar-scroll">
+                <nav>
+                    <ul class="nav">
+                        <li><a href="index.html" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+                        <li><a href="category.html" class=""> <span>category</span></a></li>
+                        <li><a href="User.html" class=""> <span>User</span></a></li>
+                        <li><a href="products.html" class="active"> <span>products</span></a></li>
+                        <li><a href="order.html" class="active"> <span>order</span></a></li>
+                        <li><a href="page-profile.html" class=""><span>profile</span></a></li>
+
+
+
+
+
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- END LEFT SIDEBAR -->
+        <!-- MAIN -->
+
+        <!-- MAIN CONTENT -->
+
+        <!-- END MAIN CONTENT -->
+    </div>
+    <!-- END MAIN -->
+    <div class="clearfix"></div>
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">@copyright <a>Nature team</a>.</p>
+        </div>
+    </footer>
+    </div>
+    <div class="aa">
+        <div class="panel">
+            <!-- <div class="panel-heading">
+				<h3 class="panel-title">Striped Row</h3>
+			</div> -->
+            <div>
+                <div style="display: flex; justify-content: space-around;">
+                    <h3> All Order</h3>
+                </div>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>order_id</th>
+                            <th>order_date</th>
+                            <th>user_id</th>
+                            <th>total_price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data-container">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- END WRAPPER -->
+    <!-- Javascript -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="assets/scripts/klorofil-common.js"></script>
+    <script>
+
+        let logoutButtonNav = document.getElementById('logoutt');
+
+        const isloggedin = sessionStorage.getItem("isLoggedIn");
+        if (isloggedin == 'true') {
+            logoutButtonNav.addEventListener('click', (e) => {
+                window.location.href = '/home/index.html';
+                sessionStorage.clear();
+            });
+        }
+        fetch('http://localhost/api/read_order.php')
+
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+                displayData(data);
+            })
+            .catch(error => {
+                console.error('Fetch error:', error);
+            });
+
+
+
+
+        // product_ID	image	name	description	price	price_after_discount	Category ID	Ation
+        function displayData(data) {
+            const dataContainer = document.getElementById('data-container');
+
+            // Assuming data is an array, you might loop through it
+            // and create HTML elements for each item
+            for (let i = 0; i < data.length; i++) {
+                const itemElement = document.createElement('tr');
+
+
+                itemElement.innerHTML = `
+						<td>${[i + 1]}</td>
+						<td>${data[i]['order_id']}</td>
+						<td>${data[i]['order_date']}</td>
+						<td>${data[i]['user_id']}</td>
+						<td>${data[i]['total_price']}</td>
+						<td>
+						<button  class="view" type="button" onclick="view(${data[i]['order_id']})"><i class="fa-regular fa-eye"></i></button>
+						<button  class="delete" type="button" onclick="delet(${data[i]['order_id']})"><i class="fa-solid fa-trash"></i></button>					
+						</td>				
+			`;
+                dataContainer.appendChild(itemElement);
+            }
+
+        }
+
+        function view(id) {
+            const url = 'http://localhost/api/read_order.php';
+
+            // Sample data to be sent in the POST request (replace with your actual data)
+            const data = {
+                "id": id
+            };
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json', // Indicate that the request contains JSON data
+                    // Additional headers if needed
+                },
+                body: JSON.stringify(data) // Convert the data to JSON format
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json(); // Parse the JSON data from the response
+                })
+                .then(responseData => {
+                    // Handle the response data as needed
+                    localStorage.setItem('product_info', JSON.stringify(responseData))
+                    console.log('POST request successful:', responseData);
+                })
+                .catch(error => {
+                    console.error('Error making POST request:', error);
+                });
+            function delayedAction() {
+                console.log('Action delayed by 1 second.');
+                window.location.href = "view_order.html"
+            }
+
+            // Delay the action by 1 second
+            setTimeout(delayedAction, 100);
+
+        }
+
+
+        function delet(id) {
+
+            url = 'http://localhost/api/delete_order.php';
+
+            // Sample data to be sent in the POST request (replace with your actual data)
+            data = {
+                "id": id
+            };
+
+            fetch(url, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json', // Indicate that the request contains JSON data
+                    // Additional headers if needed
+                },
+                body: JSON.stringify(data) // Convert the data to JSON format
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json(); // Parse the JSON data from the response
+                })
+                .then(responseData => {
+                    // Handle the response data as needed
+                    console.log('POST request successful:', responseData);
+                })
+                .catch(error => {
+                    console.error('Error making POST request:', error);
+                });
+
+
+
+
+
+            // window.location.href="edit-category.html"
+            function delayedAction() {
+                console.log('Action delayed by 1 second.');
+                window.location.href = "order.html"
+            }
+
+            // Delay the action by 1 second
+            setTimeout(delayedAction, 100);
+        }
+
+    </script>
+</body>
+
+</html>

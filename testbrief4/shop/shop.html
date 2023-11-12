@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/shop/shop.css">
+    <title>Shop page</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/home/index.html" class="logo"><i class="fas fa-shopping-basket"></i> NATURE</a>
+
+        <nav class="navbar">
+            <a href="/home/index.html">Home</a>
+            <a href="#home">Shop</a>
+            <a href="#footer-footer">Contact Us</a>
+            <button class="btn" id="sigupp">sigup</button>
+            <button class="btn" id="loginn">login</button>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Fresh And <span>Organic</span> Products </h3>
+            <p>Embark On A Flavorful Journey With Our Exquisite Selection Of Fresh Fruits, Vibrant Vegetables, And
+                Aromatic Herbs!</p>
+        </div>
+    </section>
+
+    <!-- filter name -->
+    <section id="filter">
+        <h1> Search for specific product or category :</h1>
+        <p> 1: Vegetables , 2: Fruits  and 3: Herbs </p>
+        <input id="input" name="name" placeholder="Write product name or category">
+        <div class="price-filter">
+            <label for="price-range" id="label">Price Range:</label>
+            <input type="range" id="price-range" min="0" max="3" step="0.1" value="5">
+            <br>
+            <span id="min-price">Min Price: 0 JD</span>
+            <span id="max-price">Max Price: 3 JD </span>
+         </div>
+        
+    </section>
+
+
+    <section class="products" id="products">
+        <h1 class="heading">Our <span> Products</span></h1>
+        <div id="card"></div>
+    </section>
+    
+   
+
+    <!-- footer -->
+    <section class="footer" id="footer-footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3> NATURE <i class="fas fa-shopping-basket"></i></h3>
+                <p>Visit our social media accounts for more!</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#" class="link"> <i class="fas fa-phone"></i> +123-446-4780 </a>
+                <a href="#" class="link"> <i class="fas fa-phone"></i> +453-576-4120 </a>
+                <a href="#" class="link"> <i class="fas fa-envelope"></i> GroceryStore@gmail.com </a>
+                <a href="#" class="link"> <i class="fas fa-map-marker-alt"></i> amman, jordan - 465690 </a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="/home/index.html" class="link"><i class="fas fa-arrow-right"></i>home</a>
+                <a href="/shop/shop.html" class="link"><i class="fas fa-arrow-right"></i>Shop</a>
+                <a href="/login_sigup/signup.html" class="link"><i class="fas fa-arrow-right"></i>Sign Up</a>
+            </div>
+    <div class="box">
+        <h3>Your Comments</h3>
+        <input type="text" placeholder="Add comment" class="comment-input">
+        
+        <div class="rating">
+            <input class="one" type="radio" id="star1" name="star1" value="1" ><label for="star1" onclick="saveValue(this)">&#9733;</label>
+            <input class="one" type="radio" id="star2" name="rating" value="2"><label for="star2" onclick="saveValue(this)">&#9733;</label>
+            <input class="one" type="radio" id="star2" name="rating" value="2"><label for="star3" onclick="saveValue(this)">&#9733;</label>
+            <input class="one" type="radio" id="star2" name="rating" value="2"><label for="star4" onclick="saveValue(this)">&#9733;</label>
+            <input class="one" type="radio" id="star2" name="rating" value="2"><label for="star5" onclick="saveValue(this)">&#9733;</label>
+
+        </div>
+        
+        <input type="submit" value="Submit" class="btn" onclick="submitComment()">
+    </div> 
+        <div class="credit"> created by <span> our team </span> | all rights reserved </div>
+
+    </section>
+
+
+    <script src="/shop/shop.js"></script>
+    <script src="/shop/cart.js"></script>
+</body>
+
+</html>

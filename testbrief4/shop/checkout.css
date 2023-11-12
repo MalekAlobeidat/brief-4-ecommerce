@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --orange: #ee3301;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow: 0.5rem 1.5rem rgb(0, 0, 0, .1);
+    --border: 2rem solid rgb(0, 0, 0, .1);
+    --outline: .1rem solid rgb(0, 0, 0, .1);
+    --outline-hover: .2rem solid var(--black);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+
+}
+
+body {
+    background: #eee;
+
+}
+
+
+.heading {
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: var(--black);
+
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+
+}
+
+.header .logo i {
+    color: var(--orange);
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: var(--black);
+
+}
+
+.header .navbar a:hover {
+    color: var(--orange);
+}
+
+.header .icons div {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--black);
+    font-size: 2rem;
+    margin-right: .3rem;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.header .icons div:hover {
+    background: var(--orange);
+    color: #fff;
+}
+
+header .bTn {
+    background-color: #fff;
+}
+
+#openMenu,
+#closeMenu {
+    display: none;
+}
+
+/* home */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/home/image/flat-lay-healthy-vegetables-frame.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 17rem;
+    padding-bottom: 10rem;
+}
+
+.home .content {
+    text-align: center;
+    width: 60rem;
+}
+
+.home .content h3 {
+    color: var(--black);
+    font-size: 3rem;
+}
+
+.home .content h3 span {
+    color: var(--orange);
+
+}
+
+.home .content p {
+    color: var(--light-color);
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    line-height: 1.8;
+
+}
+
+/* .container */
+.container {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 120vh;
+    justify-content: center;
+}
+
+.card-container {
+    width: 500px;
+    max-width: 90%;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #e2e9e1;
+    background-color: #fff;
+    outline: var(--outline);
+    outline-offset: -1rem;
+    box-shadow: var(--box-shadow);
+}
+
+
+
+.card-container:hover {
+    outline: var(--outline-hover);
+    outline-offset: 0rem;
+}
+
+.payment {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.payment form {
+    width: 100%;
+}
+
+.payment h1 {
+    color: var(--orange);
+    padding-bottom: 25px;
+    font-size: xx-large;
+    text-align: center
+}
+
+.payment h2 {
+    padding-left: 10px;
+}
+
+.payment input,
+select {
+    padding: 15px;
+    width: 100%;
+    border: none;
+    font-size: medium;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+#check {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    border: .2rem solid var(--black);
+    display: flex;
+    border-radius: .5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+#check:hover {
+    background: var(--orange);
+    color: #fff;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer{
+    background: #fff;
+   padding: 30px 50px;
+}
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+.footer .box-container .box h3 i{
+    color: var(--orange);
+}
+.footer .box-container .box .link{
+    display: block;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+.footer .box-container .box .link i{
+    color: var(--orange);
+    padding-right: .5rem;
+}
+.footer .box-container .box .link:hover i{
+    padding-right: 2rem;
+}
+.footer .box-container .box p{
+    line-height: 1.8;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+.footer .box-container .box .share a{
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius:.5rem;
+    font-size: 2rem;
+    color: var(--black);
+    margin-left: .2rem;
+    background: #eee;
+    text-align: center;
+}
+.footer .box-container .box .share a:hover{
+    background: var(--orange);
+    color: #fff;
+} 
+.footer .box-container .box .comment-input{
+width: 100%;
+margin: .7rem 0;
+padding: 5rem;
+border: .5rem;
+background: #eee;
+font-size: 1.6rem;
+color: var(--black);
+text-transform: none;
+}
+
+.footer .credit{
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: var(--black);
+    border-top: var(--black);
+}
+.footer .credit span{
+color: var(--orange);
+}
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 24px;
+    cursor: pointer;
+    color:var(--orange);
+}
+
+.rating input:checked + label {
+    color: var(--orange);
+}
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+    border: 0.2rem solid var(--black);
+    color: var(--black);
+    cursor: pointer;
+    background: none;
+}
+.btn:hover{
+    background: var(--orange);
+    color: #fff;
+
+}
